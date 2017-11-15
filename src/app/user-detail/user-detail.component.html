@@ -1,0 +1,9 @@
+<div>
+  <form>
+    <div *ngIf="editName" class="form-group">
+      <input type="text" class="form-control" name="name" required placeholder="name"
+      [(ngModel)]="user.name">
+    </div>
+    <h3 *ngIf="!editName" (click)="onNameClick()">{{user.name}}</h3>
+  </form>
+</div>
